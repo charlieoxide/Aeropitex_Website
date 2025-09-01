@@ -6,12 +6,13 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center mb-4">
+            <div className="flex items-center space-x-3 mb-4">
               <img 
                 src={logoUrl} 
                 alt="Aeropithex Logo" 
                 className="h-10 w-auto"
               />
+              <span className="text-xl font-bold text-white">AEROPITHEX</span>
             </div>
             <p className="text-muted-foreground text-sm">
               Pioneering the future of technology with innovative solutions.
