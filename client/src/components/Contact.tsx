@@ -58,17 +58,17 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 relative">
+    <section id="contact" className="py-20 relative section-fade">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            <span className="neon-purple">Ready to</span> <span className="neon-cyan">Innovate?</span>
+            <span className="neon-pink">Ready to</span> <span className="neon-orange">Innovate?</span>
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
             Let's build the future together with cutting-edge technology solutions
           </p>
           
-          <div className="glass-card neon-border-cyan rounded-xl p-8 max-w-2xl mx-auto">
+          <div className="glass-card neon-border-orange rounded-xl p-8 max-w-2xl mx-auto">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
@@ -151,8 +151,8 @@ export default function Contact() {
                   type="submit" 
                   className={`w-full px-8 py-4 rounded-lg font-semibold transition-all ${
                     isSubmitting 
-                      ? 'neon-border-green neon-green' 
-                      : 'neon-border-cyan glass-card hover-glow neon-cyan'
+                      ? 'neon-border-blue neon-blue' 
+                      : 'neon-border-orange glass-card hover-glow neon-orange'
                   }`}
                   disabled={isSubmitting}
                   data-testid="button-submit-contact"

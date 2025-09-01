@@ -15,7 +15,7 @@ export default function AdminDashboard() {
   if (statsLoading || activitiesLoading) {
     return (
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold mb-8 neon-cyan">Dashboard Overview</h1>
+        <h1 className="text-3xl font-bold mb-8 neon-orange">Dashboard Overview</h1>
         <div className="grid md:grid-cols-4 gap-6 mb-8">
           {[1, 2, 3, 4].map((i) => (
             <div key={i} className="glass-card rounded-xl p-6 animate-pulse">
@@ -31,13 +31,13 @@ export default function AdminDashboard() {
   const getActivityIcon = (type: string) => {
     switch (type) {
       case "USER":
-        return <User className="neon-green h-4 w-4" />;
+        return <User className="neon-blue h-4 w-4" />;
       case "PROJECT":
-        return <Briefcase className="neon-purple h-4 w-4" />;
+        return <Briefcase className="neon-pink h-4 w-4" />;
       case "SECURITY":
-        return <Shield className="neon-cyan h-4 w-4" />;
+        return <Shield className="neon-orange h-4 w-4" />;
       default:
-        return <User className="neon-green h-4 w-4" />;
+        return <User className="neon-blue h-4 w-4" />;
     }
   };
 
@@ -71,62 +71,62 @@ export default function AdminDashboard() {
 
   return (
     <div className="max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold mb-8 neon-cyan">Dashboard Overview</h1>
+      <h1 className="text-3xl font-bold mb-8 neon-orange">Dashboard Overview</h1>
       
       {/* Stats Grid */}
       <div className="grid md:grid-cols-4 gap-6 mb-8">
-        <Card className="glass-card neon-border-cyan">
+        <Card className="glass-card neon-border-orange">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-muted-foreground">Total Users</p>
-                <p className="text-2xl font-bold neon-cyan" data-testid="stat-total-users">
+                <p className="text-2xl font-bold neon-orange" data-testid="stat-total-users">
                   {stats?.totalUsers || 0}
                 </p>
               </div>
-              <Users className="neon-cyan h-8 w-8" />
+              <Users className="neon-orange h-8 w-8" />
             </div>
           </CardContent>
         </Card>
         
-        <Card className="glass-card neon-border-purple">
+        <Card className="glass-card neon-border-pink">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-muted-foreground">Active Projects</p>
-                <p className="text-2xl font-bold neon-purple" data-testid="stat-active-projects">
+                <p className="text-2xl font-bold neon-pink" data-testid="stat-active-projects">
                   {stats?.activeProjects || 0}
                 </p>
               </div>
-              <Projector className="neon-purple h-8 w-8" />
+              <Projector className="neon-pink h-8 w-8" />
             </div>
           </CardContent>
         </Card>
         
-        <Card className="glass-card neon-border-green">
+        <Card className="glass-card neon-border-blue">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-muted-foreground">Revenue</p>
-                <p className="text-2xl font-bold neon-green" data-testid="stat-revenue">
+                <p className="text-2xl font-bold neon-blue" data-testid="stat-revenue">
                   {stats?.revenue || "$0"}
                 </p>
               </div>
-              <DollarSign className="neon-green h-8 w-8" />
+              <DollarSign className="neon-blue h-8 w-8" />
             </div>
           </CardContent>
         </Card>
         
-        <Card className="glass-card neon-border-cyan">
+        <Card className="glass-card neon-border-orange">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-muted-foreground">Growth</p>
-                <p className="text-2xl font-bold neon-cyan" data-testid="stat-growth">
+                <p className="text-2xl font-bold neon-orange" data-testid="stat-growth">
                   {stats?.growth || "0%"}
                 </p>
               </div>
-              <TrendingUp className="neon-cyan h-8 w-8" />
+              <TrendingUp className="neon-orange h-8 w-8" />
             </div>
           </CardContent>
         </Card>
@@ -135,7 +135,7 @@ export default function AdminDashboard() {
       {/* Recent Activity */}
       <Card className="glass-card">
         <CardHeader>
-          <CardTitle className="neon-purple">Recent Activity</CardTitle>
+          <CardTitle className="neon-pink">Recent Activity</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
@@ -146,7 +146,7 @@ export default function AdminDashboard() {
                 data-testid={`activity-${activity.id}`}
               >
                 <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 neon-border-green rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 neon-border-blue rounded-full flex items-center justify-center">
                     {getActivityIcon(activity.type)}
                   </div>
                   <div>

@@ -13,9 +13,9 @@ export default function Services() {
         "Advanced Analytics",
         "API-First Design"
       ],
-      borderClass: "neon-border-cyan",
-      iconClass: "neon-cyan",
-      titleClass: "neon-cyan"
+      borderClass: "neon-border-orange",
+      iconClass: "neon-orange",
+      titleClass: "neon-orange"
     },
     {
       id: "ai",
@@ -28,9 +28,9 @@ export default function Services() {
         "Natural Language Processing", 
         "Predictive Analytics"
       ],
-      borderClass: "neon-border-purple",
-      iconClass: "neon-purple",
-      titleClass: "neon-purple"
+      borderClass: "neon-border-pink",
+      iconClass: "neon-pink",
+      titleClass: "neon-pink"
     },
     {
       id: "security",
@@ -43,25 +43,25 @@ export default function Services() {
         "Quantum Encryption",
         "24/7 Monitoring"
       ],
-      borderClass: "neon-border-green", 
-      iconClass: "neon-green",
-      titleClass: "neon-green"
+      borderClass: "neon-border-blue", 
+      iconClass: "neon-blue",
+      titleClass: "neon-blue"
     }
   ];
 
   return (
-    <section id="services" className="py-20 relative">
+    <section id="services" className="py-20 relative section-fade">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="neon-purple">Our</span> <span className="neon-cyan">Services</span>
+            <span className="neon-pink">Our</span> <span className="neon-orange">Services</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Comprehensive technology solutions designed for the future
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 stagger-children">
           {services.map((service, index) => (
             <div 
               key={service.id}
@@ -81,7 +81,7 @@ export default function Services() {
               <ul className="space-y-2 text-sm">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center">
-                    <Check className="neon-green h-4 w-4 mr-2" />
+                    <Check className="neon-blue h-4 w-4 mr-2" />
                     {feature}
                   </li>
                 ))}

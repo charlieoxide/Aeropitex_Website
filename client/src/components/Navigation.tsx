@@ -16,10 +16,10 @@ export default function Navigation() {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 neon-border-cyan rounded-lg flex items-center justify-center">
-              <Zap className="h-4 w-4 neon-cyan" />
+            <div className="w-8 h-8 neon-border-orange rounded-lg flex items-center justify-center">
+              <Zap className="h-4 w-4 neon-orange" />
             </div>
-            <span className="text-xl font-bold neon-cyan">Aeropithex</span>
+            <span className="text-xl font-bold neon-orange">Aeropithex</span>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
@@ -46,9 +46,9 @@ export default function Navigation() {
             data-testid="button-mobile-menu"
           >
             {isMobileMenuOpen ? (
-              <X className="h-6 w-6 neon-cyan" />
+              <X className="h-6 w-6 neon-orange" />
             ) : (
-              <Menu className="h-6 w-6 neon-cyan" />
+              <Menu className="h-6 w-6 neon-orange" />
             )}
           </Button>
         </div>

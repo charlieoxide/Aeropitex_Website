@@ -62,9 +62,9 @@ export default {
           ring: "var(--sidebar-ring)",
         },
         neon: {
-          cyan: "var(--neon-cyan)",
-          purple: "var(--neon-purple)",
-          green: "var(--neon-green)",
+          orange: "var(--neon-orange)",
+          pink: "var(--neon-pink)",
+          blue: "var(--neon-blue)",
         },
       },
       fontFamily: {

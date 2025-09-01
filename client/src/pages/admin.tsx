@@ -12,7 +12,7 @@ export default function Admin() {
         {/* Admin Sidebar */}
         <div className="w-64 bg-card border-r border-border p-6">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-xl font-bold neon-cyan">Admin Panel</h2>
+            <h2 className="text-xl font-bold neon-orange">Admin Panel</h2>
             <Button 
               variant="ghost" 
               size="sm"
@@ -25,19 +25,19 @@ export default function Admin() {
           
           <nav className="space-y-4">
             <a href="#dashboard" className="flex items-center space-x-2 p-2 rounded-lg hover:bg-accent transition-colors" data-testid="link-dashboard">
-              <i className="fas fa-chart-bar neon-green"></i>
+              <i className="fas fa-chart-bar neon-blue"></i>
               <span>Dashboard</span>
             </a>
             <a href="#settings" className="flex items-center space-x-2 p-2 rounded-lg hover:bg-accent transition-colors" data-testid="link-settings">
-              <i className="fas fa-cog neon-purple"></i>
+              <i className="fas fa-cog neon-pink"></i>
               <span>Settings</span>
             </a>
             <a href="#users" className="flex items-center space-x-2 p-2 rounded-lg hover:bg-accent transition-colors" data-testid="link-users">
-              <i className="fas fa-users neon-cyan"></i>
+              <i className="fas fa-users neon-orange"></i>
               <span>Users</span>
             </a>
             <a href="#messages" className="flex items-center space-x-2 p-2 rounded-lg hover:bg-accent transition-colors" data-testid="link-messages">
-              <i className="fas fa-envelope neon-green"></i>
+              <i className="fas fa-envelope neon-blue"></i>
               <span>Messages</span>
             </a>
           </nav>

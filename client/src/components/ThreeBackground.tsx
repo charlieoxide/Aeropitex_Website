@@ -40,11 +40,11 @@ export default function ThreeBackground() {
         // Neon colors
         const colorChoice = Math.random();
         if (colorChoice < 0.33) {
-          colors[i] = 0; colors[i + 1] = 1; colors[i + 2] = 1; // Cyan
+          colors[i] = 1; colors[i + 1] = 0.6; colors[i + 2] = 0; // Orange
         } else if (colorChoice < 0.66) {
-          colors[i] = 1; colors[i + 1] = 0; colors[i + 2] = 1; // Purple
+          colors[i] = 1; colors[i + 1] = 0.4; colors[i + 2] = 0.8; // Pink
         } else {
-          colors[i] = 0; colors[i + 1] = 1; colors[i + 2] = 0; // Green
+          colors[i] = 0.4; colors[i + 1] = 0.6; colors[i + 2] = 1; // Blue
         }
       }
       
@@ -69,9 +69,9 @@ export default function ThreeBackground() {
       ];
       
       const wireframeMaterials = [
-        new THREE.MeshBasicMaterial({color: 0x00ffff, wireframe: true, transparent: true, opacity: 0.3}),
-        new THREE.MeshBasicMaterial({color: 0xff00ff, wireframe: true, transparent: true, opacity: 0.3}),
-        new THREE.MeshBasicMaterial({color: 0x00ff00, wireframe: true, transparent: true, opacity: 0.3})
+        new THREE.MeshBasicMaterial({color: 0xff9900, wireframe: true, transparent: true, opacity: 0.3}),
+        new THREE.MeshBasicMaterial({color: 0xff66cc, wireframe: true, transparent: true, opacity: 0.3}),
+        new THREE.MeshBasicMaterial({color: 0x6699ff, wireframe: true, transparent: true, opacity: 0.3})
       ];
       
       const meshes: any[] = [];
