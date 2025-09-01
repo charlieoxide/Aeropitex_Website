@@ -65,7 +65,7 @@ export default function Services() {
           {services.map((service, index) => (
             <div 
               key={service.id}
-              className={`glass-card ${service.borderClass} rounded-xl p-8 hover-glow floating`}
+              className={`glass-card border-2 ${service.borderClass} rounded-xl p-8 hover:scale-105 transform transition-all duration-300 floating shadow-lg`}
               style={{animationDelay: `${index * 0.5}s`}}
               data-testid={`card-service-${service.id}`}
             >

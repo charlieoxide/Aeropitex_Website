@@ -16,13 +16,12 @@ export default function Navigation() {
     <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center">
             <img 
               src={logoUrl} 
               alt="Aeropithex Logo" 
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
-            <span className="text-xl font-bold text-primary-green">Aeropithex</span>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
@@ -34,7 +33,7 @@ export default function Navigation() {
               variant="ghost" 
               size="sm" 
               onClick={handleAdminAccess}
-              className="opacity-0 hover:opacity-100 text-xs transition-opacity"
+              className="opacity-50 hover:opacity-100 text-xs transition-opacity text-brand-green hover:text-brand-green"
               data-testid="button-admin"
             >
               Admin
@@ -68,7 +67,7 @@ export default function Navigation() {
                 variant="ghost" 
                 size="sm" 
                 onClick={handleAdminAccess}
-                className="text-left justify-start"
+                className="text-left justify-start text-brand-green hover:text-brand-green"
                 data-testid="mobile-button-admin"
               >
                 Admin

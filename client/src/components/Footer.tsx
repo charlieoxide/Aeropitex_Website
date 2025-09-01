@@ -6,13 +6,12 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center space-x-3 mb-4">
+            <div className="flex items-center mb-4">
               <img 
                 src={logoUrl} 
                 alt="Aeropithex Logo" 
-                className="h-8 w-auto"
+                className="h-10 w-auto"
               />
-              <span className="text-xl font-bold text-primary-green">Aeropithex</span>
             </div>
             <p className="text-muted-foreground text-sm">
               Pioneering the future of technology with innovative solutions.
@@ -40,14 +39,14 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4 text-primary-green">Connect</h4>
             <div className="flex space-x-4">
-              <a href="#" className="w-8 h-8 border-primary-green rounded-lg flex items-center justify-center hover-glow" data-testid="social-twitter">
-                <i className="fab fa-twitter text-primary-green text-sm"></i>
+              <a href="#" className="w-10 h-10 border-2 border-brand-green rounded-lg flex items-center justify-center hover:bg-brand-green hover:text-black transition-all" data-testid="social-twitter">
+                <i className="fab fa-twitter text-brand-green hover:text-black"></i>
               </a>
-              <a href="#" className="w-8 h-8 border-secondary-green rounded-lg flex items-center justify-center hover-glow" data-testid="social-linkedin">
-                <i className="fab fa-linkedin text-secondary-green text-sm"></i>
+              <a href="#" className="w-10 h-10 border-2 border-brand-green-secondary rounded-lg flex items-center justify-center hover:bg-brand-green-secondary hover:text-black transition-all" data-testid="social-linkedin">
+                <i className="fab fa-linkedin text-brand-green-secondary hover:text-black"></i>
               </a>
-              <a href="#" className="w-8 h-8 border-accent-blue rounded-lg flex items-center justify-center hover-glow" data-testid="social-github">
-                <i className="fab fa-github text-accent-blue text-sm"></i>
+              <a href="#" className="w-10 h-10 border-2 border-brand-blue-accent rounded-lg flex items-center justify-center hover:bg-brand-blue-accent hover:text-white transition-all" data-testid="social-github">
+                <i className="fab fa-github text-brand-blue-accent hover:text-white"></i>
               </a>
             </div>
           </div>

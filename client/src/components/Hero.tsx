@@ -28,13 +28,13 @@ export default function Hero() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
-              className="px-8 py-4 border-primary-green glass-card hover-glow rounded-lg font-semibold text-primary-green transition-all"
+              className="px-8 py-4 bg-brand-green text-black hover:bg-brand-green/90 rounded-lg font-semibold transition-all shadow-lg hover:shadow-xl"
               data-testid="button-explore-services"
             >
               Explore Services
             </button>
             <button 
-              className="px-8 py-4 border border-muted-foreground hover:border-primary rounded-lg font-semibold transition-all"
+              className="px-8 py-4 border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-black rounded-lg font-semibold transition-all"
               data-testid="button-learn-more"
             >
               Learn More

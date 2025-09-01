@@ -151,8 +151,8 @@ export default function Contact() {
                   type="submit" 
                   className={`w-full px-8 py-4 rounded-lg font-semibold transition-all ${
                     isSubmitting 
-                      ? 'border-accent-blue text-accent-blue' 
-                      : 'border-primary-green glass-card hover-glow text-primary-green'
+                      ? 'bg-brand-blue-accent text-white' 
+                      : 'bg-brand-green text-black hover:bg-brand-green/90'
                   }`}
                   disabled={isSubmitting}
                   data-testid="button-submit-contact"
