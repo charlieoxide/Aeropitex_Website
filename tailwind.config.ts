@@ -61,10 +61,10 @@ export default {
           border: "var(--sidebar-border)",
           ring: "var(--sidebar-ring)",
         },
-        neon: {
-          orange: "var(--neon-orange)",
-          pink: "var(--neon-pink)",
-          blue: "var(--neon-blue)",
+        brand: {
+          green: "var(--primary-green)",
+          "green-secondary": "var(--secondary-green)",
+          "blue-accent": "var(--accent-blue)",
         },
       },
       fontFamily: {

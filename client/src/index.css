@@ -39,9 +39,9 @@
   --font-serif: 'Inter', sans-serif;
   --font-mono: Menlo, monospace;
   --radius: 0.4rem;
-  --neon-orange: hsl(30, 100%, 60%);
-  --neon-pink: hsl(330, 100%, 60%);
-  --neon-blue: hsl(220, 100%, 60%);
+  --primary-green: hsl(85, 100%, 50%);
+  --secondary-green: hsl(140, 100%, 40%);
+  --accent-blue: hsl(210, 100%, 60%);
   --shadow: 0px 2px 0px 0px hsl(9, 75%, 61% / 0.00), 0px 1px 2px -1px hsl(9, 75%, 61% / 0.00);
   --spacing: 0.25rem;
   --shadow-lg: 0px 2px 0px 0px hsl(9, 75%, 61% / 0.00), 0px 4px 6px -1px hsl(9, 75%, 61% / 0.00);
@@ -99,39 +99,36 @@
   }
 }
 
-/* Custom Neon Styles */
-.neon-orange {
-  color: var(--neon-orange);
-  text-shadow: 0 0 5px var(--neon-orange), 0 0 10px var(--neon-orange), 0 0 15px var(--neon-orange);
+/* Modern Color Styles */
+.text-primary-green {
+  color: var(--primary-green);
 }
 
-.neon-pink {
-  color: var(--neon-pink);
-  text-shadow: 0 0 5px var(--neon-pink), 0 0 10px var(--neon-pink), 0 0 15px var(--neon-pink);
+.text-secondary-green {
+  color: var(--secondary-green);
 }
 
-.neon-blue {
-  color: var(--neon-blue);
-  text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 15px var(--neon-blue);
+.text-accent-blue {
+  color: var(--accent-blue);
 }
 
-.neon-border-orange {
-  border: 1px solid var(--neon-orange);
-  box-shadow: 0 0 5px var(--neon-orange), inset 0 0 5px rgba(255, 150, 0, 0.25);
+.border-primary-green {
+  border: 1px solid var(--primary-green);
+  box-shadow: 0 0 10px rgba(128, 255, 0, 0.3);
 }
 
-.neon-border-pink {
-  border: 1px solid var(--neon-pink);
-  box-shadow: 0 0 5px var(--neon-pink), inset 0 0 5px rgba(255, 100, 200, 0.25);
+.border-secondary-green {
+  border: 1px solid var(--secondary-green);
+  box-shadow: 0 0 10px rgba(0, 255, 128, 0.3);
 }
 
-.neon-border-blue {
-  border: 1px solid var(--neon-blue);
-  box-shadow: 0 0 5px var(--neon-blue), inset 0 0 5px rgba(100, 150, 255, 0.25);
+.border-accent-blue {
+  border: 1px solid var(--accent-blue);
+  box-shadow: 0 0 10px rgba(64, 150, 255, 0.3);
 }
 
-.bg-neon-gradient {
-  background: linear-gradient(135deg, rgba(255, 150, 0, 0.13), rgba(255, 100, 200, 0.13), rgba(100, 150, 255, 0.13));
+.bg-tech-gradient {
+  background: linear-gradient(135deg, rgba(128, 255, 0, 0.13), rgba(0, 255, 128, 0.13), rgba(64, 150, 255, 0.13));
 }
 
 .floating {
@@ -163,8 +160,8 @@
 
 .tech-grid {
   background-image: 
-    linear-gradient(rgba(255, 150, 0, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 150, 0, 0.1) 1px, transparent 1px);
+    linear-gradient(rgba(128, 255, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(128, 255, 0, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
@@ -186,7 +183,7 @@
 
 /* Hover Effects */
 .hover-glow:hover {
-  box-shadow: 0 0 20px rgba(255, 150, 0, 0.5);
+  box-shadow: 0 0 20px rgba(128, 255, 0, 0.5);
   transform: translateY(-2px);
   transition: all 0.3s ease;
 }

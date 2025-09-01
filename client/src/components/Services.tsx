@@ -13,9 +13,9 @@ export default function Services() {
         "Advanced Analytics",
         "API-First Design"
       ],
-      borderClass: "neon-border-orange",
-      iconClass: "neon-orange",
-      titleClass: "neon-orange"
+      borderClass: "border-primary-green",
+      iconClass: "text-primary-green",
+      titleClass: "text-primary-green"
     },
     {
       id: "ai",
@@ -28,9 +28,9 @@ export default function Services() {
         "Natural Language Processing", 
         "Predictive Analytics"
       ],
-      borderClass: "neon-border-pink",
-      iconClass: "neon-pink",
-      titleClass: "neon-pink"
+      borderClass: "border-secondary-green",
+      iconClass: "text-secondary-green",
+      titleClass: "text-secondary-green"
     },
     {
       id: "security",
@@ -43,9 +43,9 @@ export default function Services() {
         "Quantum Encryption",
         "24/7 Monitoring"
       ],
-      borderClass: "neon-border-blue", 
-      iconClass: "neon-blue",
-      titleClass: "neon-blue"
+      borderClass: "border-accent-blue", 
+      iconClass: "text-accent-blue",
+      titleClass: "text-accent-blue"
     }
   ];
 
@@ -54,7 +54,7 @@ export default function Services() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="neon-pink">Our</span> <span className="neon-orange">Services</span>
+            <span className="text-secondary-green">Our</span> <span className="text-primary-green">Services</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Comprehensive technology solutions designed for the future
@@ -81,7 +81,7 @@ export default function Services() {
               <ul className="space-y-2 text-sm">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center">
-                    <Check className="neon-blue h-4 w-4 mr-2" />
+                    <Check className="text-accent-blue h-4 w-4 mr-2" />
                     {feature}
                   </li>
                 ))}
