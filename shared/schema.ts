@@ -18,21 +18,7 @@ export const contacts = pgTable("contacts", {
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
-export const adminStats = pgTable("admin_stats", {
-  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
-  totalUsers: integer("total_users").default(0),
-  activeProjects: integer("active_projects").default(0),
-  revenue: text("revenue").default("0"),
-  growth: text("growth").default("0%"),
-  updatedAt: timestamp("updated_at").defaultNow().notNull(),
-});
-
-export const activities = pgTable("activities", {
-  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
-  message: text("message").notNull(),
-  type: text("type").notNull(),
-  timestamp: timestamp("timestamp").defaultNow().notNull(),
-});
+// Admin tables removed
 
 export const insertUserSchema = createInsertSchema(users).pick({
   username: true,
@@ -46,23 +32,10 @@ export const insertContactSchema = createInsertSchema(contacts).pick({
   message: true,
 });
 
-export const insertAdminStatsSchema = createInsertSchema(adminStats).pick({
-  totalUsers: true,
-  activeProjects: true,
-  revenue: true,
-  growth: true,
-});
-
-export const insertActivitySchema = createInsertSchema(activities).pick({
-  message: true,
-  type: true,
-});
+// Admin schemas removed
 
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 export type InsertContact = z.infer<typeof insertContactSchema>;
 export type Contact = typeof contacts.$inferSelect;
-export type InsertAdminStats = z.infer<typeof insertAdminStatsSchema>;
-export type AdminStats = typeof adminStats.$inferSelect;
-export type InsertActivity = z.infer<typeof insertActivitySchema>;
-export type Activity = typeof activities.$inferSelect;
+// Admin types removed

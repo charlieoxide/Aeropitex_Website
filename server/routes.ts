@@ -15,35 +15,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Get all contacts (admin only)
-  app.get("/api/contacts", async (req, res) => {
-    try {
-      const contacts = await storage.getContacts();
-      res.json(contacts);
-    } catch (error) {
-      res.status(500).json({ error: "Failed to fetch contacts" });
-    }
-  });
-
-  // Get admin stats
-  app.get("/api/admin/stats", async (req, res) => {
-    try {
-      const stats = await storage.getAdminStats();
-      res.json(stats);
-    } catch (error) {
-      res.status(500).json({ error: "Failed to fetch admin stats" });
-    }
-  });
-
-  // Get recent activities
-  app.get("/api/admin/activities", async (req, res) => {
-    try {
-      const activities = await storage.getActivities();
-      res.json(activities);
-    } catch (error) {
-      res.status(500).json({ error: "Failed to fetch activities" });
-    }
-  });
+  // Admin functionality removed
 
   const httpServer = createServer(app);
   return httpServer;

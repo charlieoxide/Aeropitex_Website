@@ -1,16 +1,10 @@
 import { useState } from "react";
-import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logoUrl from "@/assets/aeropithex-logo.png";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [, setLocation] = useLocation();
-
-  const handleAdminAccess = () => {
-    setLocation("/admin");
-  };
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b border-border">
@@ -30,15 +24,6 @@ export default function Navigation() {
             <a href="#services" className="hover:text-primary transition-colors" data-testid="link-services">Services</a>
             <a href="#about" className="hover:text-primary transition-colors" data-testid="link-about">About</a>
             <a href="#contact" className="hover:text-primary transition-colors" data-testid="link-contact">Contact</a>
-            <Button 
-              variant="ghost" 
-              size="sm" 
-              onClick={handleAdminAccess}
-              className="opacity-50 hover:opacity-100 text-xs transition-opacity text-brand-green hover:text-brand-green"
-              data-testid="button-admin"
-            >
-              Admin
-            </Button>
           </div>
           
           <Button
@@ -64,15 +49,6 @@ export default function Navigation() {
               <a href="#services" className="hover:text-primary transition-colors" data-testid="mobile-link-services">Services</a>
               <a href="#about" className="hover:text-primary transition-colors" data-testid="mobile-link-about">About</a>
               <a href="#contact" className="hover:text-primary transition-colors" data-testid="mobile-link-contact">Contact</a>
-              <Button 
-                variant="ghost" 
-                size="sm" 
-                onClick={handleAdminAccess}
-                className="text-left justify-start text-brand-green hover:text-brand-green"
-                data-testid="mobile-button-admin"
-              >
-                Admin
-              </Button>
             </div>
           </div>
         )}
