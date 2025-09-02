@@ -1,6 +1,35 @@
+import { useEffect } from "react";
+import anime from "animejs";
 import { Code, Brain, Shield, Check } from "lucide-react";
 
 export default function Services() {
+  useEffect(() => {
+    // Animate service cards on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const cards = entry.target.querySelectorAll('.service-card');
+          
+          anime({
+            targets: cards,
+            opacity: [0, 1],
+            translateY: [50, 0],
+            scale: [0.8, 1],
+            duration: 1000,
+            delay: anime.stagger(200),
+            easing: 'easeOutElastic(1, .8)'
+          });
+        }
+      });
+    }, { threshold: 0.2 });
+
+    const servicesSection = document.querySelector('#services');
+    if (servicesSection) {
+      observer.observe(servicesSection);
+    }
+
+    return () => observer.disconnect();
+  }, []);
   const services = [
     {
       id: "saas",
@@ -65,8 +94,7 @@ export default function Services() {
           {services.map((service, index) => (
             <div 
               key={service.id}
-              className={`glass-card border-2 ${service.borderClass} rounded-xl p-8 hover:scale-105 transform transition-all duration-300 floating shadow-lg`}
-              style={{animationDelay: `${index * 0.5}s`}}
+              className={`service-card glass-card border-2 ${service.borderClass} rounded-xl p-8 hover:scale-105 transform transition-all duration-300 floating shadow-lg opacity-0`}
               data-testid={`card-service-${service.id}`}
             >
               <div className={`w-16 h-16 ${service.borderClass} rounded-lg flex items-center justify-center mb-6 mx-auto`}>

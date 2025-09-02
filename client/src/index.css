@@ -294,11 +294,64 @@
 
 /* Smooth Scroll */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto; /* Let anime.js handle smooth scrolling */
 }
 
 /* Admin Panel Styles */
 .admin-panel {
   background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(20px);
+}
+
+/* Enhanced animations with anime.js support */
+.anime-element {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.scroll-progress-bar {
+  width: 0%;
+  transition: none; /* Let anime.js handle transitions */
+}
+
+/* 3D Model morphing effects */
+.morph-indicator {
+  background: linear-gradient(45deg, var(--primary-green), var(--accent-blue));
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Enhanced glow effects */
+.enhanced-glow {
+  filter: drop-shadow(0 0 10px var(--primary-green)) 
+          drop-shadow(0 0 20px var(--primary-green)) 
+          drop-shadow(0 0 30px var(--primary-green));
+}
+
+/* Particle trail effects */
+.particle-trail {
+  position: relative;
+  overflow: hidden;
+}
+
+.particle-trail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(128, 255, 0, 0.3), transparent);
+  animation: particleTrail 2s linear infinite;
+}
+
+@keyframes particleTrail {
+  0% { left: -100%; }
+  100% { left: 100%; }
 }

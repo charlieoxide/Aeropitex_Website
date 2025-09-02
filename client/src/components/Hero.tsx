@@ -1,4 +1,66 @@
+import { useEffect } from "react";
+import anime from "animejs";
+
 export default function Hero() {
+  useEffect(() => {
+    // Enhanced entrance animations
+    anime.timeline({
+      easing: 'easeOutExpo',
+    })
+    .add({
+      targets: '.hero-title-1',
+      opacity: [0, 1],
+      translateX: [-100, 0],
+      duration: 1000,
+    })
+    .add({
+      targets: '.hero-title-2',
+      opacity: [0, 1],
+      translateX: [100, 0],
+      duration: 1000,
+    }, '-=800')
+    .add({
+      targets: '.hero-title-3',
+      opacity: [0, 1],
+      translateX: [-100, 0],
+      duration: 1000,
+    }, '-=800')
+    .add({
+      targets: '.hero-subtitle',
+      opacity: [0, 1],
+      translateY: [30, 0],
+      duration: 800,
+    }, '-=600')
+    .add({
+      targets: '.hero-buttons',
+      opacity: [0, 1],
+      translateY: [20, 0],
+      duration: 600,
+    }, '-=400');
+
+    // Continuous floating animation for background elements
+    anime({
+      targets: '.floating',
+      translateY: [-10, 10],
+      duration: 3000,
+      direction: 'alternate',
+      loop: true,
+      easing: 'easeInOutSine',
+      delay: anime.stagger(200)
+    });
+
+    // Pulse animation for glowing elements
+    anime({
+      targets: '.pulse-glow',
+      scale: [1, 1.1],
+      opacity: [0.6, 1],
+      duration: 2000,
+      direction: 'alternate',
+      loop: true,
+      easing: 'easeInOutQuad',
+      delay: anime.stagger(300)
+    });
+  }, []);
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden tech-grid pt-20 section-fade">
       {/* Animated Background Elements */}
@@ -26,16 +88,16 @@ export default function Hero() {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
-            <span className="text-primary-green pulse-neon slide-in-left">Future</span><br />
-            <span className="text-secondary-green slide-in-right" style={{animationDelay: '0.5s'}}>Tech</span>{' '}
-            <span className="text-accent-blue slide-in-left" style={{animationDelay: '1s'}}>Solutions</span>
+            <span className="hero-title-1 text-primary-green pulse-neon opacity-0">Future</span><br />
+            <span className="hero-title-2 text-secondary-green opacity-0">Tech</span>{' '}
+            <span className="hero-title-3 text-accent-blue opacity-0">Solutions</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto section-fade" style={{animationDelay: '1.5s'}}>
+          <p className="hero-subtitle text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto opacity-0">
             Pioneering the next generation of technology with cutting-edge AI, security, and SaaS solutions
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="hero-buttons flex flex-col sm:flex-row gap-4 justify-center opacity-0">
             <button 
               className="px-8 py-4 bg-brand-green text-black hover:bg-brand-green/90 rounded-lg font-semibold transition-all shadow-lg hover:shadow-xl"
               data-testid="button-explore-services"
