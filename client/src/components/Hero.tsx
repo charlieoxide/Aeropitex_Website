@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import * as anime from "animejs";
+import anime from "animejs";
 
 export default function Hero() {
   useEffect(() => {
