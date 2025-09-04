@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import anime from "animejs";
+import * as anime from "animejs";
 import { Code, Brain, Shield, Check } from "lucide-react";
 
 export default function Services() {
