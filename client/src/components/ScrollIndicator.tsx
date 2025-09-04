@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import * as anime from "animejs";
+import anime from "animejs";
 
 export default function ScrollIndicator() {
   const [scrollProgress, setScrollProgress] = useState(0);

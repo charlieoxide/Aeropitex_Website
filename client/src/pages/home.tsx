@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import * as anime from "animejs";
+import anime from "animejs";
 import ThreeBackground from "@/components/ThreeBackground";
 import ScrollIndicator from "@/components/ScrollIndicator";
 import Navigation from "@/components/Navigation";
